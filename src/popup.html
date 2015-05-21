@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Register.si WHOIS</title>
+    <link rel="stylesheet" href="style.min.css" type="text/css" />
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <form id="search" method="POST">
+        <img id="captcha" />
+        <div class="form-field">
+            <span class="error" id="captcha-code-error">Napačna koda</span>
+            <input type="text" name="captcha-code" id="captcha-code" placeholder="captcha koda" />
+        </div>
+        <div class="form-field with-form-field-group">
+            <span class="error" id="domain-error">Napačna domena</span>
+            <input type="text" name="domain" id="domain" placeholder=".si domain" /> 
+            <span class="form-field-addon">.si</span>
+        </div>
+        <div class="form-actions">
+            <a href="#" class="more-information">več informacij</a>
+            <button type="submit" id="do-whois">whois</button>
+        </div>
+    </form>
+    <div id="about">
+        Namen dodatka je enostavno preverjanje prostih domen oz. pridobivanje podatkov o .si domenah. 
+
+        <h3>Avtorske pravice</h3>
+        Vsi logotipi so last podjetja <a href="http://www.register.si/o-nas.html" target="_blank">ARNES</a>.
+
+        <h3>Kontakt</h3>
+        Če imate vprašanje ali pa ste odkrili hrošča, me prosim kontaktirajte na <a href="mailto:erol@erol.si">erol@erol.si</a>.
+    </div>
+    <div id="loading"><img src="images/loading.gif" /></div>
+    <table id="results"></table>
+    <div id="available">Juhu, domena je prosta!</div>
+  </body>
+</html>
